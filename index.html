@@ -1,51 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloGeneral.css">
+    <link rel="stylesheet" href="css/estiloFormulario.css">
+    <title>Iniciar seccion</title>
 </head>
 <body>
     <header>
-        <p>Torneo Academia Stem</p>
-        <img src="img/logoPagina.png" alt="Logo De pagina">
-    </header>
-    <main>
-        <div>
-            <p>Votos por proyectos</p>
-            <p>Categoria iOT</p>
+        <div class="sesion">
+            <h2><a href="formularioCuenta.html">Crear Cuenta</a></h2>
         </div>
-        <div>
-            <div>
-                <div>
-                    <p>ITCJ</p>
-                    <p id="conta1"></p>
-                </div>
-                <div>
-                    <p>TEC</p>
-                    <p id="conta2"></p>
-                </div>
-                <div>
-                    <p>URN</p>
-                    <p id="conta3"></p>
-                </div>
-                <div>
-                    <p>UACJ</p>
-                    <p id="conta4"></p>
-                </div>
-                <div>
-                    <p>UACH</p>
-                    <p id="conta5"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="" alt="">
-                    <div id="miBtn1">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
+    </header>
+
+    <main>
+        <div class="formulario">
+            <form action="php/login.php" method="POST">
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena">
+
+                <button type="submit">Iniciar Seccion</button>
+            </form>
+
+            <a href="formularioCuenta.html">No tengo una cuenta</a>
+
         </div>
     </main>
 </body>

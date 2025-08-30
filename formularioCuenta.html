@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloGeneral.css">
+    <link rel="stylesheet" href="css/estiloFormulario.css">
+    <title>Crear cuenta</title>
+</head>
+<body>
+     <header>
+        <div class="sesion">
+            <h2><a href="index.html">Iniciar Sesión</a></h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="formulario">
+            <form action="php/procesar.php" method="POST">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="correo" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" min="18" max="70" required>
+
+                <label for="universidad">Universidad:</label>
+                <select name="universidad" required>
+                    <option value="">-- Selecciona una Universidad --</option>
+                    <option value="itcj">ITCJ</option>
+                    <option value="tec">TEC</option>
+                    <option value="urn">URN</option>
+                    <option value="uacj">UACJ</option>
+                    <option value="uach">UACH</option>
+                </select>
+
+                <label for="telefono">Numero de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" maxlength="12" 
+                    placeholder="123-456-7890" required
+                >
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena">
+
+                <button type="submit">Aceptar</button>
+                
+            </form>
+
+            <a href="index.html">Ya tengo una cuenta</a>
+        </div>
+    </main>
+
+    <script>
+        const input = document.getElementById("telefono");
+
+        input.addEventListener("input", function (e) {
+
+            let valor = e.target.value.replace(/\D/g, "");
+
+            if (valor.length > 3 && valor.length <= 6) {
+                valor = valor.slice(0, 3) + "-" + valor.slice(3);
+            } else if (valor.length > 6) {
+                valor = valor.slice(0, 3) + "-" + valor.slice(3, 6) + "-" + valor.slice(6, 10);
+            }
+
+            e.target.value = valor;
+        });
+    </script>
+</body>
+</html>
