@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 
 // Obtener datos del formulario
 $correo = trim($_POST['correo']);
-$contrasena = trim($_POST['contrasena']); // Debe coincidir con el name en tu form
+$contrasena = trim($_POST['contrasena']); 
 
 // Buscar usuario por correo
 $stmt = $conn->prepare("SELECT user_id, nombre, contrasena FROM usuarios WHERE correo = ?");
@@ -25,9 +25,9 @@ $result = $stmt->get_result();
 if ($result->num_rows === 1) {
     $usuario = $result->fetch_assoc();
 
-if (password_verify($contrasena, $usuario['Contraseña'])) {
-    $_SESSION['usuario_id'] = $usuario['user_id'];
-    $_SESSION['nombre'] = $usuario['Nombre'];
+if (password_verify($contrasena, $usuario['contrasena'])) {
+    $_SESSION['user_id'] = $usuario['user_id'];
+    $_SESSION['nombre'] = $usuario['nombre'];
 
     header("Location: ../votacion.php");
     exit();
