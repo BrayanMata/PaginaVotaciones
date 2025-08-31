@@ -2,10 +2,7 @@
 session_start();
 
 // Conexión a la base de datos
-$host = "localhost";
-$dbname = "usuario_votacion";
-$user = "root";
-$password = "";
+require "conexion.php";
 
 $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {

@@ -1,18 +1,8 @@
 <?php
 session_start();
 
-// Datos de conexión
-$host = "localhost";
-$dbname = "usuario_votacion";
-$user = "root";
-$password = "";
-
-$conn = new mysqli($host, $user, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+//Conexion a la base de datos
+require "conexion.php";
 
 // Recibir y sanitizar datos del formulario
 $nombre = htmlspecialchars($_POST['nombre']);

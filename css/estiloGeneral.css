@@ -8,18 +8,18 @@
 
 :root
 {
-    /*--body-Color: #203754;
+    --body-Color: #203754;
     --azulFuerte-Color: #3e5ca6;
     --azulOscuro-Color: #003d7d;
     --azulClaro-Color: #007bd1;
     --azulBajito-Color: #6acef1;
-    --blanco-Color: #f0f0f0;*/
+    --blanco-Color: #f0f0f0;
     --negro-Color: #111111;
 }
 
-header img{
+/*header img{
     width: 130px;
-}
+}*/
 
 main{
     width: 100%;

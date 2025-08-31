@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--azulFuerte-Color);
-    border: 5px solid var(--blanco-Color);
+    /*background-color: var(--azulFuerte-Color);
+    border: 5px solid var(--blanco-Color);*/
     border-radius: 15px;
     padding: 10px;
     margin: 20px;

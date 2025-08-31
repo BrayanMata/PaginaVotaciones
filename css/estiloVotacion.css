@@ -1,0 +1,78 @@
+header
+{
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+main
+{
+    flex-direction: column;
+}
+
+main div 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+main > :first-child h4
+{
+    margin-bottom: 20px;
+}
+
+.contadores
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.contadores div
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.conTexto p 
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.conTexto > :first-child
+{
+    color: var(--azulOscuro-Color);
+    margin-right: 10px;
+}
+
+.votar
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.votar input 
+{
+    width: 120px;
+    height: 40px;
+    background-color: var(--azulOscuro-Color);
+    color: var(--blanco-Color);
+    font-size: 20px;
+}
+
+.votar input:hover
+{
+    background-color: var(--azulFuerte-Color);
+}
+
+.votar input:disabled 
+{
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
