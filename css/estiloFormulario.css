@@ -1,3 +1,13 @@
+header
+{
+    padding: 20px;
+    justify-content: space-between;
+}
+header img
+{
+
+}
+
 .formulario{
     width: 500px;
     height: auto;
@@ -10,6 +20,7 @@
     border-radius: 15px;
     padding: 10px;
     margin: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 }
 .formulario a{
     margin-top: 15px;
